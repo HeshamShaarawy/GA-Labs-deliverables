@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>New Skill</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/" >Home</a>
+        <a class="nav-link" href="/skills">Dev Skills</a>
+    </nav>
+     <h1>New Skill</h1>
+    <form action="/skills" method="POST" autocomplete="off" style="padding: 20px;">
+       <input class="form-control" type="text" name="skill" placeholder="Skill" >
+        <br>
+        <input class="form-control" type="text" name="comments" placeholder="Comments">
+        <br>
+        <button  class="btn btn-primary" type="submit">Save</button>
+    </form>    
+   
+</body>
+</html>

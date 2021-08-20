@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">.
+    <title>Skills Home Page</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/" class="navbar-brand">Home</a>
+        <a class="nav-link" href="/skills/new">Add Skill</a>
+    </nav>
+    <br>
+    <h1> List of the skills:</h1>
+    <div class="alert alert-dark">
+        Listing of the skills:
+    </div>
+    <div class="container">  
+        <div class="row row-cols-2">    
+            
+            <% skills.forEach(function(skill){ %>
+                <div class="col"> 
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="/skills/<%= skill.id %>"><%=skill.skill%></a> </h5>
+                        <p class="card-text"><%= skill.comments %></p>
+                        <a href="/skills/<%= skill.id%>/edit" class="card-link">Edit</a>
+                        <a href="/skills/<%= skill.id %>?_method=DELETE 'id=delete-form' method='POST'" class="card-link">Delete</a>
+                      
+                    </div> 
+                </div>  
+            </div>  <% }); %>
+        </div> 
+      
+
+</div>
+    <a href="/skills/new">Add Skill</a>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <a href="/skills">Skills Home Page</a>
+    <p>Welcome to <%= title %></p>
+
+    <div class="alert alert-secondary" role="alert"> 
+      
+      This project is based on node.JS and express:
+      it is about having a list of skills that the user can:
+            
+      
+      <ul>
+      <li> See a list of all skills, </li>
+      <li> Review the details of a single  skill </li>
+      <li> Add new skill</li>
+      <li> Edit a skill</li>
+      <li> Delete a skill</li>
+    </ul>
+    There is none-database project, so items are saved in an array that will be go back to default once the server is restarted. 
+
+    </div>
+  </body>
+</html>
