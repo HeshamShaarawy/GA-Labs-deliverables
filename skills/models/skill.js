@@ -1,10 +1,10 @@
 const skills = [
     {id: 1010 , skill: "HTML/CSS/Javascript", comments: "can create webpages, blogs and different projects" },
-    {id: 1010 , skill: "Jquery", comments: "familiar with Jquery" },
-    {id: 1010 , skill: "Node.JS Express", comments: "Able to build a server" },
-    {id: 1010 , skill: "MongoDB", comments: "understand and deal with nonSQL DB" },
-    {id: 1010 , skill: "Python", comments: " sample comment" },
-    {id: 1010 , skill: "SQL", comments: " sample comment" }
+    {id: 1011 , skill: "Jquery", comments: "familiar with Jquery" },
+    {id: 1012 , skill: "Node.JS Express", comments: "Able to build a server" },
+    {id: 1013 , skill: "MongoDB", comments: "understand and deal with nonSQL DB" },
+    {id: 1014 , skill: "Python", comments: " sample comment" },
+    {id: 1015 , skill: "SQL", comments: " sample comment" }
 ]
 
 function getAll(){
