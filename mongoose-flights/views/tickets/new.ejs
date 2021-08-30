@@ -1,0 +1,14 @@
+<%- include('../base/header') %>
+
+<h2>Enter a New Ticket</h2>
+<form action="/tickets/<%= flightId %>/tickets" method="POST">
+    <label>Seat :<br>
+        <input type="text" name="seat" required pattern="[A-F][1-9]\d?" placeholder="letter(A to F)+No.(1-9)" >
+    </label><br>
+    <label>Price:<br>
+        <input type="number" name="price" placeholder=" enter value in CAD">
+    </label><br>
+    <input type="submit" value="Add Ticket">
+</form>
+
+<%- include('../base/footer') %>

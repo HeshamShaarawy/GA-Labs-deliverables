@@ -1,0 +1,32 @@
+<%- include('../base/header') %>
+<h4>Flights Schedule</h4>
+  
+<table class='table table-striped table-hover'>
+  <thead>
+    <tr>
+      <th>Air Line</th>
+      <th>Air Port</th>
+      <th>Flight Number</th>
+      <th>Depart Date</th>
+      <th>Depart time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Write the line of EJS to iterate over movies using forEach -->
+    <% sortFlights.forEach(function(f) { %> 
+    <tr class=" <%= f.departs < Date.now()? `text-danger` : `text-dark`; %> ">
+        
+        <td><%= f.airline %></td>
+        <td><%= f.airport %></td>
+        <td><%= f.flightNo %></td>
+        <td><%= f.departs.toISOString().slice(0, 10) %></td>
+        <td><%= f.departs.toISOString().slice(11, 16) %></td>
+        <td><a href="/flights/<%=f._id%>" > details</td>
+    </tr>
+    <!-- Close the forEach using EJS here -->
+    <% }); %>
+  </tbody>
+</table>
+
+
+<%- include('../base/footer') %>

@@ -1,0 +1,77 @@
+<%- include('../base/header') %>
+<h4 class="h4"> The flight details </h4>
+     <div> Airline : <%= flight.airline %></div>
+     <div> Airport : <%= flight.airport %></div>
+     <div> Flight Number : <%= flight.flightNo %></div>
+     <div> Departs : <%= flight.departs %></div>
+     <br>
+     <h4 class="h4">Flight destinations: </h4> 
+     <table class="table table-bordered table-sm ">
+          <thread>
+               <tr> 
+                    <th scope="col">Airport</th>
+                    <th scope="col">Arrival</th>
+                    
+               </tr>
+          </thread>
+          <tbody>
+               <% destinations.forEach(fdest => {  %>
+               <tr>
+                    <td><%= fdest.airport %></td>
+                    <td><%= fdest.arrival %></td>
+                    <td>
+
+                    </td>
+               </tr>
+               <% }) %>
+
+          </tbody>
+     </table>
+
+<br>
+      <h4>Add destinations to this flight</h4>
+
+     <form action="/flights/<%=flight.id%>/"  method="POST">
+          <label>Destination:
+               <select name="airport">
+                    <option value="AUS">AUS</option>
+                    <option value="DFW">DFW</option>
+                    <option value="DEN">DEN</option>
+                    <option value="LAX">LAX</option>
+                    <option value="SAN">SAN</option>
+               </select>
+          </label>
+          <label> Arrival:
+               <input type ="datetime-local"  name="arrival">
+          </label>
+          <br>
+          <button type="submit" class="btn btn-primary">Submit</button>
+     </form>
+      <br> 
+      <h4> Tickets</h4>
+      <table class="table-sm table-striped table-hover table-bordered">
+         <thead>
+           <tr>
+             <th>Seat</th>
+             <th>Price</th>
+             <th>refund</th>
+           </tr>
+         </thead>
+         <tbody>
+           <% tickets.forEach(function(t) { %>
+             <tr>
+               <td><%= t.seat %></td>
+               <td><%= t.price%></td>
+               <td>
+                 <form action="/s/<%= flight._id %>/tickets/<%= t._id %>?_method=DELETE" class="delete-form" method="Delete">
+                     <button type="submit">Delete Ticket</button>
+                 </form>
+               </td>
+             </tr>
+             <% }); %>
+           </tbody>
+         </table>
+       <a class="h4" href="/tickets/<%= flight._id %>/tickets/new"> Book tickets </a>  
+      
+     
+<%- include('../base/footer') %>
