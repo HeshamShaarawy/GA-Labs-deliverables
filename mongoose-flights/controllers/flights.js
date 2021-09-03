@@ -50,6 +50,9 @@ async function addDest(req,res){
     await flight.save()
     res.redirect(`/flights/${flight.id}`)
 }
+
+
+
    
 
 module.exports = {
