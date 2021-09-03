@@ -1,7 +1,7 @@
 <%- include('../base/header') %>
 <h2 class="text-center">Add a new flight </h2>  
 <form action="/flights" method="POST">
-    <label>Air Line           :
+    <label>Air Line     :
         <select name="airline">
             <option value="American">American AirLines</option>
             <option value="Southwest">Southwest</option>
@@ -20,11 +20,11 @@
     </label><br>
    
     <label>Flight No    : 
-        <input type="number" name= "flightNo"  placeholder=" enter 2 to 4 numeric-digits">
+        <input type="number" name= "flightNo"  placeholder=" 2 to 4 numbers">
     </label><br>
    
-    <label> Departure Date
-        <input type ="datetime-local" name="departs" value="<%= (new Date()).toISOString().slice(0, 16)%>">
+    <label> Departure Date 
+        <input type ="datetime-local" name="departs" value="<%= new Date().toISOString().slice(0, 16)%>">
     </label>    
     <br>
     <button type="submit" class="btn btn-primary">Submit</button>

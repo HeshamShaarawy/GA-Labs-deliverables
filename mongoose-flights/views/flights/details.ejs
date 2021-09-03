@@ -63,7 +63,7 @@
                <td><%= t.seat %></td>
                <td><%= t.price%></td>
                <td>
-                 <form action="/s/<%= flight._id %>/tickets/<%= t._id %>?_method=DELETE" class="delete-form" method="Delete">
+                 <form action="/tickets/<%= flight._id %>/tickets/<%= t._id %>?_method=DELETE" class="delete-form" method="DELETE">
                      <button type="submit">Delete Ticket</button>
                  </form>
                </td>

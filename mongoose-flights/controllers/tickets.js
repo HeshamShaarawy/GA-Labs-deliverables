@@ -17,7 +17,7 @@ function create (req, res){
 
 // to delete a ticket 
 function deleteTicket (req, res) {
-   Ticket.findOneAndDelete(req.params.ticketId, function (err, ticket){
+    Ticket.findOneAndDelete(req.params.ticketId, function (err, ticket){
         res.redirect(`/flights/${req.params.flightId}`); 
     });
 };
