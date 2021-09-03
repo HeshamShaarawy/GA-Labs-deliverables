@@ -21,5 +21,4 @@
         1. Sort the list of `destinations` for a flight by the `arrival` date/time in ascending order.
     ## Part 3
     - Create a ticket module
-    - in the flight details we can see tickets, book more and delete any.
-     
+    - in the flight details we can see tickets, book more and delete any. 
