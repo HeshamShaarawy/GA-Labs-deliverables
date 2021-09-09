@@ -1,11 +1,11 @@
 const Ticket = require("../models/ticket")
 
-function newTicket(req, res) {
-   
+// to display the form to create a new ticket
+function newTicket(req, res) { 
     res.render('tickets/new', { flightId: req.params.id });
 }
 
-
+// to save the data received form to create a new ticket into the database
 function create (req, res){
    const flightId = req.params.id;
    const ticket = new Ticket(req.body);
@@ -15,8 +15,9 @@ function create (req, res){
     })  
 };
 
+// to delete a ticket 
 function deleteTicket (req, res) {
-   Ticket.findOneAndDelete(req.params.ticketId, function (err, ticket){
+    Ticket.findOneAndDelete(req.params.ticketId, function (err, ticket){
         res.redirect(`/flights/${req.params.flightId}`); 
     });
 };
