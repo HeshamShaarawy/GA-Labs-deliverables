@@ -1,0 +1,10 @@
+body{
+    margin: 1rem;    
+    
+}
+display: flex;
+    margin: 10px;
+    flex-direction: column;
+    padding: 20px;
+    height: 95vh;
+    
