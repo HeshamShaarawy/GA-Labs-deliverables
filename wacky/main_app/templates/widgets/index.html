@@ -51,7 +51,7 @@
     <hr>
     <h4>Add Widget</h4>
     <div>
-        <form action="{%url 'widget_create' %}" class= "pure-form pure-form-stacked" method="post">
+        <form action="{%url 'widget_create' %}" class= "pure-form" method="post">
             {% csrf_token %}
             {{widget_form.as_table}}
             <input type="submit" class="pure-button" value="Add Widget">
