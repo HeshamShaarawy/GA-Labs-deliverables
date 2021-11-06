@@ -23,7 +23,7 @@ class WidgetIndex(ListView):
          # Add in a QuerySet of all the books
     context['widget_form'] = WidgetForm()
     total_quantity = Widget.objects.all().aggregate(Sum('quantity'))
-    context['total_quantity_sum'] = total_quantity['quantity__sum']
+    context['total_quantity'] = total_quantity['quantity__sum']
     return context
   
 
